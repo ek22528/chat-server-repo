@@ -38,6 +38,7 @@ func main() {
 	// Get the server address and port from the commandline arguments.
 	addrPtr := flag.String("ip", "127.0.0.1:8030", "IP:port string to connect to")
 	flag.Parse()
+  fmt.Println(*addrPtr)
 	//TODO Try to connect to the server
   conn, err := net.Dial("tcp", *addrPtr)
   if err != nil {
